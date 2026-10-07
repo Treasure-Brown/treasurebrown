@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No dead ends when a connection breaks. · Treasure Brown</title>
+<meta name="description" content="When a member’s bank connection expired, autopay failed silently, and people found out from a missed payment. I led design on a re-link experience that fixes it in place, and helped set the principle the team built around: no dead ends.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css?v=21">
+<script>try{if(!localStorage.getItem("tb_access"))document.documentElement.classList.add("locked")}catch(e){document.documentElement.classList.add("locked")}</script>
+</head>
+<body class="hide-prompts has-progress">
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a href="../index.html" class="brand" aria-label="Treasure Brown, home">TB<b>.</b></a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <span class="nav-blob" aria-hidden="true"></span>
+      <a href="../index.html">Home</a>
+      <a href="../case-studies.html" aria-current="true">Case studies</a>
+      <a href="../about.html">About</a>
+      <a href="../resume.html">Resumé</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    </div>
+  </div>
+  <span class="read-progress" id="read-progress" aria-hidden="true"></span>
+  <nav class="shell mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <a href="../index.html">Home</a>
+    <a href="../case-studies.html" aria-current="true">Case studies</a>
+    <a href="../about.html">About</a>
+    <a href="../resume.html">Resumé</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="content">
+  <span id="top"></span>
+<section class="case-cover"><div class="shell"><a class="text-link back" href="../case-studies.html"><span>←</span> All work</a><p class="case-count">Case 06 of 08 · Iteration</p><p class="eyebrow">Happy Money / Bank linking / 2025–2026</p><h1>No dead ends when <em>a connection breaks</em>.</h1><p class="deck">When a member’s bank connection expired, autopay failed silently, and people found out from a missed payment. I led design on a re-link experience that fixes it in place, and helped set the principle the team built around: no dead ends.</p><dl class="case-glance" aria-label="At a glance"><p class="eyebrow">At a glance</p><div><dt>The problem</dt><dd>Expired bank connections broke autopay without warning, and re-linking meant starting setup over.</dd></div><div><dt>Why it mattered</dt><dd>Missed payments meant fees for members, support tickets for the team, and lost trust.</dd></div><div><dt>My role</dt><dd>Design lead within a shared effort. I designed the end-to-end re-link flow; a teammate designed the error state, and engineering built the retry logic.</dd></div><div><dt>What I changed</dt><dd>Members see the problem in context and re-link in place, with their autopay intact.</dd></div><div><dt>The result</dt><dd>Working across design and engineering, bank-link completion rose from 53.2% to 62.9%, a 9.7-point team result.</dd></div></dl><div class="case-meta"><div><span>Role</span><strong>Design lead, shared effort</strong></div><div><span>Timeframe</span><strong>Aug 2025 → Apr 2026</strong></div><div><span>Team</span><strong>Product / Eng / Design</strong></div><div><span>Outcome</span><strong>+9.7pp bank-link completion</strong></div></div></div></section><div class="shell"><figure style="margin:0"><div class="hero-frame"><div class="window"><div class="window-bar"><i></i><i></i><i></i><span>Funnel Enhancements / Iteration</span></div><div class="figma-hero"><img class="fit" src="../images/plaid-relink.png" alt="Bank-link recovery with a clear path to continue."></div></div></div><figcaption class="caption">Bank-link recovery with a clear path to continue.</figcaption></figure></div><div class="shell"><div class="story chapters"><section class="chapter" data-settle><p class="chapter-label">01 / The situation</p><div class="chapter-content"><h2>Autopay failed quietly.</h2><p class="lead-line">Nobody knew a connection had expired until a payment bounced.</p><p>Applicants had the mirror problem: they were asked to link accounts again even when valid connections already existed.</p></div></section><section class="chapter" data-settle><p class="chapter-label">02 / The tension</p><div class="chapter-content"><h2>Engineering could see the break. Members couldn’t.</h2><p class="lead-line">The fix lived in a moment of experience, not in the API.</p><dl class="constraints"><div><dt>A fragile step</dt><dd>Bank linking is where about a quarter of applicants used to drop.</dd></div><div><dt>Two products</dt><dd>The same problem showed up in servicing and in the application, owned by different teams.</dd></div><div><dt>Noisy errors</dt><dd>Many connection errors are temporary and resolve on their own.</dd></div></dl></div></section><section class="chapter" data-settle><p class="chapter-label">03 / My read</p><div class="chapter-content"><h2>Silence is a defect.</h2><p class="lead-line">If someone can get stuck, they need a path forward, and we need to know about it.</p><p>We wrote it into the acceptance criteria, so it outlived any single screen.</p><p class="pull">“There is no dead-end state; the borrower always has a path forward.”</p></div></section><section class="chapter" data-settle><p class="chapter-label">04 / The moves</p><div class="chapter-content"><h2>Detect it, say it, fix it in place.</h2><ol class="moves-list"><li><div><h3>Re-link in context</h3><p>A prompt at the right moment, and a re-link that keeps autopay settings.</p></div></li><li><div><h3>Carry the pattern into the application</h3><p>The same pattern, paired with retry logic that handles temporary errors before asking anything of the applicant.</p></div></li><li><div><h3>Make silence visible</h3><p>An error that showed zero occurrences despite hundreds of confirmed failures was treated as a reporting bug, not a healthy flow.</p></div></li></ol><div class="not-built"><div class="not-built-head"><span>What I chose not to do</span><span>Why</span></div><div class="not-built-row"><h3>A test to separate the pieces</h3><p>The re-link flow and retry logic shipped close together without an A/B test, so the lift is reported as a team result.</p></div></div></div></section></div></div><section class="impact" aria-label="What changed"><div class="shell impact-inner"><p class="eyebrow">05 / What changed</p><h2>More linked accounts, everywhere downstream.</h2><div class="impact-grid"><div class="impact-card"><b>+9.7pp</b><span>Bank-link completion</span><p>53.2% → 62.9%, across about 7,000 applicants.</p></div><div class="impact-card"><b>64.6%</b><span>Later window</span><p>The gain held. Design’s re-authentication work and engineering’s retry logic shipped together.</p></div><div class="impact-card"><b>→</b><span>Downstream</span><p>More linked accounts, more autopay enrollments, fewer returned payments.</p></div></div><div class="reflection"><p class="eyebrow">In hindsight</p><p class="lead">Some of design’s best work is a sentence in the acceptance criteria. “No dead ends” did more than any single screen.</p></div></div></section><div class="shell"><details class="deeper"><summary><span class="deeper-title">Go deeper</span><span class="deeper-sub">Collaboration, trade-offs, and what I’d do differently</span><span class="deeper-ic" aria-hidden="true">+</span></summary><div class="deeper-grid"><div class="deeper-item"><h3>What I’d do differently</h3><p>For returning applicants, engineering proposed the interaction model before design was in the room. Next time I’d push to be there earlier.</p></div><div class="deeper-item rv"><h3>How I brought people along</h3><p><span class="rv">Add one real moment of influence: how “no dead ends” became an acceptance criterion: who you worked with and how you got it adopted.</span></p></div></div></details></div><div class="shell"><a class="next-case" href="decline.html"><div><p class="eyebrow">Next / 07 / Advocacy</p><h2>A decline shouldn’t be a dead end.</h2></div><span class="arrow magnetic" aria-hidden="true">→</span></a><div class="case-contact"><p class="eyebrow">Let's talk</p><p class="case-contact-line">What are you working toward? <a href="#contact">Get in touch</a>, <a href="../resume.html">read the resumé</a>, or <a href="../case-studies.html">see all work</a>.</p></div></div>
+</main>
+<section class="contact" id="contact">
+  <div class="shell contact-inner">
+    <p class="eyebrow">Next / Let's talk</p>
+    <h2>What are you<br><em><span class="scribble wait" id="scribble">working toward?<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 12 C 60 6, 120 14, 180 9 S 260 6, 298 8"/></svg></span></em></h2>
+    <p class="contact-deck">I’m interested in roles where I can help frame the opportunity, shape the experience, and lead the work forward. Let’s talk.</p><div class="email-row">
+      <span class="email prompt" id="email">treasurebrown16@gmail.com</span>
+      <button class="btn on-dark magnetic" id="copy-email" type="button">Copy email</button>
+    </div>
+    <div class="button-row">
+      
+      <a class="btn on-dark" href="../resume.html">Resumé <span class="ic r">→</span></a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <span>© 2026 Treasure Brown</span>
+    <span class="clock" id="clock" aria-label="Local time, Eastern">Eastern Time</span>
+    <a href="../index.html">Back to top <span class="ic u">↑</span></a>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"><i aria-hidden="true">✓</i><span>Email copied</span></div>
+<script src="../js/site.js?v=4"></script>
+</body>
+</html>
